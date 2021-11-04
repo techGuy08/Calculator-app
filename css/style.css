@@ -276,3 +276,8 @@ body.dark .btn-control.equal {
     font-size: 8px;
   }
 }
+@media screen and (max-width:200px) {
+  html{
+    font-size: 5px;
+  }
+}
