@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background: hsl(222, 26%, 31%);
+  color: #fff;
+  font-family: "Spartan", sans-serif;
+  transition: background 0.3s;
+}
+body.light {
+  background: hsl(0, 0%, 90%);
+}
+body.dark {
+  background: hsl(268, 75%, 9%);
+}
+a {
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+.row .col-1 {
+  flex-basis: 25%;
+}
+.row .col-2 {
+  flex-basis: 50%;
+}
+.row .col-3 {
+  flex-basis: 75%;
+}
+.row .col-4 {
+  flex-basis: 100%;
+}
+.row [class*="col"] {
+  margin-bottom: 2rem;
+}
+.calculator {
+  max-width: 45rem;
+  margin: 3rem auto;
+  font-family: "Spartan", sans-serif;
+}
+
+.calculator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.theme-switcher {
+  display: flex;
+  align-items: flex-end;
+}
+.calculator-header .logo {
+  font-size: 3rem;
+  font-weight: 600;
+}
+body.light .calculator-header .logo {
+  transition: 0.3s;
+  color: hsl(60, 10%, 19%);
+}
+body.dark .calculator-header .logo {
+  transition: 0.3s;
+  color: hsl(52, 100%, 62%)
+}
+.theme-switcher-label {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+body.light .theme-switcher-label {
+  transition: 0.3s;
+  color: hsl(60, 10%, 19%);
+  font-weight: 600;
+}
+body.dark .theme-switcher-label {
+  transition: 0.3s;
+  color: hsl(52, 100%, 62%);
+}
+.theme-switcher-body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.theme-switcher-values {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+body.light .theme-switcher-values {
+  transition: 0.3s;
+  color: hsl(60, 10%, 19%);
+  font-weight: 600;
+}
+body.dark .theme-switcher-values {
+  transition: 0.3s;
+  color: hsl(52, 100%, 62%);
+}
+.theme-switcher-values span {
+  cursor: pointer;
+}
+.theme-switcher-switch {
+  width: 5.5rem;
+  height: 2rem;
+  background: hsl(224, 36%, 15%);
+  border-radius: 10rem;
+  position: relative;
+  cursor: pointer;
+}
+body.light .theme-switcher-switch {
+  transition: 0.3s;
+  background: hsl(0, 5%, 81%);
+}
+body.dark .theme-switcher-switch {
+  transition: 0.3s;
+  background: hsl(268, 71%, 12%);
+}
+.theme-switcher-switch::after {
+  content: "";
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 100%;
+  background: hsl(6, 63%, 50%);
+  position: absolute;
+  top: 50%;
+  left: 0.4rem;
+  transform: translate(0%, -50%);
+  transition: left 0.3s;
+}
+.light .theme-switcher-switch::after {
+  transition: 0.3s;
+  background: hsl(25, 98%, 40%);
+  left: calc(50% - 0.6rem);
+}
+.dark .theme-switcher-switch::after {
+  transition: 0.3s;
+  background:  hsl(176, 100%, 44%);
+  left: calc(100% - 1.6rem);
+}
+.calculator-screen {
+  background: hsl(224, 36%, 15%);
+  min-height: 11rem;
+  border-radius: 1rem;
+  color: white;
+  margin-bottom: 2rem;
+  line-height: 5rem;
+  font-size: 4rem;
+  font-weight: 600;
+  padding: 2rem;
+  overflow-x: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row;
+  width: 100%;
+}
+body.light .calculator-screen {
+  transition: 0.3s;
+  background: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
+}
+body.dark .calculator-screen {
+  transition: 0.3s;
+  background: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
+}
+.calculator-screen * {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.calculator-controls {
+  background: hsl(223, 31%, 20%);
+  border-radius: 1rem;
+  padding: 2.5rem 1rem;
+}
+body.light .calculator-controls {
+  transition: 0.3s;
+  background: hsl(0, 5%, 81%);
+}
+body.dark .calculator-controls {
+  transition: 0.3s;
+  background: hsl(268, 71%, 12%);
+}
+.btn-control {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  background: hsl(30, 25%, 89%);
+  padding: 1rem;
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0px 0.3rem hsl(28deg 16% 65%);
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Spartan", sans-serif;
+  height: 5.4rem;
+  line-height: 4rem;
+  color: hsl(221, 14%, 31%);
+}
+body.light .btn-control {
+  transition: 0.3s;
+  background: hsl(45, 7%, 89%);
+  color: hsl(60, 10%, 19%);
+  box-shadow: 0 0.3rem hsl(35, 11%, 61%);
+}
+body.dark .btn-control {
+  transition: 0.3s;
+  background: hsl(268, 47%, 21%);
+  color: hsl(52, 100%, 62%);
+  box-shadow: 0 0.3rem hsl(290, 70%, 36%);
+}
+.btn-control:active {
+  transition: transform 0.5s;
+  transform: scale(0.9);
+}
+.col-2 .btn-control {
+  width: 90%;
+}
+.btn-control.del,
+.btn-control.reset {
+  transition: 0.3s;
+  background: hsl(225, 21%, 49%);
+  box-shadow: 0px 0.3rem hsl(224, 28%, 35%);
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.8rem;
+}
+body.light .btn-control.del,
+body.light .btn-control.reset {
+  transition: 0.3s;
+  background: hsl(185, 42%, 37%);
+  box-shadow: 0 0.3rem hsl(185, 58%, 25%);
+  color: hsl(0deg, 0%, 100%);
+}
+body.dark .btn-control.del,
+body.dark .btn-control.reset {
+  transition: 0.3s;
+  background: hsl(281, 89%, 26%);
+  color: hsl(0deg, 0%, 100%);
+  box-shadow: 0 0.3rem hsl(285, 91%, 52%);
+}
+.btn-control.equal {
+  background: hsl(6, 63%, 50%);
+  box-shadow: 0px 0.3rem hsl(6, 70%, 34%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.6rem;
+}
+body.light .btn-control.equal {
+  transition: 0.3s;
+  background: hsl(25, 98%, 40%);
+  box-shadow: 0 0.3rem hsl(25, 99%, 27%);
+  color: hsl(0deg, 0%, 100%);
+}
+body.dark .btn-control.equal {
+  transition: 0.3s;
+  background: hsl(176, 100%, 44%);
+  color: hsl(198, 20%, 13%);
+  box-shadow: 0 0.3rem hsl(177, 92%, 70%);
+}
