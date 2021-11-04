@@ -26,7 +26,7 @@ a {
 
 .row {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
 }
 .row .col-1 {
   flex-basis: 25%;
@@ -46,6 +46,7 @@ a {
 .calculator {
   max-width: 45rem;
   margin: 3rem auto;
+  padding: 0 20px;
   font-family: "Spartan", sans-serif;
 }
 
@@ -268,4 +269,10 @@ body.dark .btn-control.equal {
   background: hsl(176, 100%, 44%);
   color: hsl(198, 20%, 13%);
   box-shadow: 0 0.3rem hsl(177, 92%, 70%);
+}
+
+@media screen and (max-width:375px) {
+  html{
+    font-size: 8px;
+  }
 }
